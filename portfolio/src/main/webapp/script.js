@@ -15,14 +15,20 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
+function addRandomFunFact() {
+    const fun1 = "I'm a big fan of Marvel and DC!";
+    const fun2 = "I enjoy various of sports and traveling"
+    const fun3 = "I love drawings and calligraphy"
+    const fun4 = "I love to try new things and meet with new people"
+    const fun5 = "Welcome to contact me anything to have some random chat!"
+    const greetings =
+        [fun1, fun2, fun3, fun4, fun5];
+  
+    // Pick a random greeting.
+    const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  
+    // Add it to the page.
+    const greetingContainer = document.getElementById('greeting-container');
+    greetingContainer.innerText = greeting;
+  }
+  
