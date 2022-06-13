@@ -32,3 +32,18 @@ function addRandomFunFact() {
     greetingContainer.innerText = greeting;
   }
   
+async function showServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+}
+
+// async function myRespond() {
+//     const responseFromServer = await fetch('/information');
+//     const textFromResponse = await responseFromServer.text();
+
+//     const infoContainer = document.getElementById('info-container');
+//     infoContainer.innerText = textFromResponse;
+// }

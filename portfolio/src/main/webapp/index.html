@@ -41,7 +41,6 @@
         announcement section in the Mini Program
       </p>
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
       <h3>Fun Facts about me</h3>
       <p>
         Click to see my interests:
@@ -52,6 +51,28 @@
     <div id="content">
       <h3>My Photo</h3>
       <img src="./images/Sea.png" alt="A photograph of sea at San Diego."></img>
+    </div>
+        <div id="content">
+        <form action="/form-handler" method="POST">
+        <p>Enter some text here:</p>
+        <textarea name="text-input">Hello! Xiaoyue!</textarea>
+        <br/>
+        <input type="submit" />
+        </form>
+
+        <p>Click this button to see the server's current date.</p>
+        <button onclick="showServerTime();">
+        Get date
+        </button>
+        <p id="date-container"></p>
+        <p>Click <a href="/date">here</a> to see the server response directly.</p>
+
+        <!-- <p>Click this button to see response.</p>
+        <button onclick="myRespond();">
+        Get respond
+        </button>
+        <p id="info-container"></p>
+        <p>Click <a href="/information">here</a> to see the response.</p> -->
     </div>
   </body>
 </html>
