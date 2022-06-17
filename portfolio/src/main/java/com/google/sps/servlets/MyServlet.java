@@ -1,29 +1,28 @@
 package com.google.sps.servlets;
 
-// import com.google.gson.Gson;
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
 
 @WebServlet("/information")
 public final class MyServlet extends HttpServlet {
-
-  String[] info = {"Hi", "This is about", "My information"};
-
-  String[] list;
-
-  public MyServlet(String[] list){
-      this.list = list;
-  }
-
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Convert the server info to JSON
-    MyServlet myservlet = new MyServlet(info);
-    String json = convertToJson(myservlet);
+    ArrayList<String> info = new ArrayList<>();
+    info.add("I enjoy basketball, badmiton, pingpong, and running");
+    info.add("I will learn tennies and boxing this summer");
+    info.add("I am learning stakeboarding now");
+    String json = convertToJson(info);
 
     // Send the JSON as the response
     response.setContentType("application/json;");
@@ -33,17 +32,9 @@ public final class MyServlet extends HttpServlet {
   /**
    * Converts a ServerStats instance into a JSON string using manual String concatentation.
    */
-  private String convertToJson(MyServlet myservlet) {
-    String json = "{";
-    json += "\"first\": ";
-    json += "\"" + myservlet.list[0] + "\"";
-    json += ", ";
-    json += "\"second\": ";
-    json += "\"" + myservlet.list[1] + "\"";
-    json += ", ";
-    json += "\"third\": ";
-    json += "\"" + myservlet.list[2] + "\"";
-    json += "}";
+  private String convertToJson(ArrayList<String> list) {
+    Gson gson = new Gson();
+    String json = gson.toJson(list);
     return json;
   }
 }
