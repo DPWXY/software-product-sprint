@@ -1,7 +1,7 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 750px;
+  width: 650px;
 }
 
 #greeting-container {
@@ -11,15 +11,4 @@
 img{
     width: 70%;
     object-fit: contain;
-}
-
-.center{
-    text-align: center;
-}
-
-#interaction {
-    margin-left: auto;
-    margin-right: auto;
-    width: 750px;
-    text-align: center;
 }
