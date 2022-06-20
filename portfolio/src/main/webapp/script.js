@@ -36,3 +36,23 @@ async function myRespond() {
     var info_choose = info_ind[random_ind];
     infoContainer.innerText = textFromResponse[info_choose];
 }
+
+function loadContacts() {
+    fetch('/contact').then(response => response.json()).then((contacts) => {
+      const contactListElement = document.getElementById('contact-list');
+      contacts.forEach((contact) => {
+        contactListElement.appendChild(createContactsElement(contact));
+      })
+    });
+}
+
+function createContactsElement(contact) {
+    const contactElement = document.createElement('li');
+    contactElement.className = 'contact';
+  
+    const infoElement = document.createElement('span');
+    infoElement.innerText = contact.info;
+  
+    contactElement.appendChild(infoElement);
+    return contactElement;
+}

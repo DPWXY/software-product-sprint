@@ -9,8 +9,15 @@
 }
 
 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
     width: 70%;
     object-fit: contain;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 .center{
@@ -22,4 +29,20 @@ img{
     margin-right: auto;
     width: 750px;
     text-align: center;
+}
+
+#contact-list {
+  list-style-type: none;
+}
+
+.contact {
+  border: thin solid black;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
+}
+
+.contact span {
+  flex-grow: 1;
 }

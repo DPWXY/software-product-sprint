@@ -45,7 +45,6 @@
         UCSD CSSA WeChat Mini Program: Design and implementation of the lottery 
         announcement section in the Mini Program
       </p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <h3>Fun Facts about me</h3>
       <p>
         Click to see my interests:
@@ -54,34 +53,45 @@
       <div id="greeting-container"></div>
     </div>
     <div id="content">
-      <h3>My Photo</h3>
+      <h3>My Photo in San Diego</h3>
       <img src="./images/Sea.png" alt="A photograph of sea at San Diego."></img>
     </div>
+        <div id="interaction">
+            <p>Click this button to see more information about me.</p>
+            <button onclick="myRespond();">
+            More Fun Facts!
+            </button>
+            <p id="info-container"></p>
+            <p>Click <a href="/information">here</a> to see the all fun facts about me.</p>
+        </div>
         <div id="interaction">
             <p>Click this button to see the server's current date.</p>
             <button onclick="showServerTime();">
             Get date
             </button>
             <p id="date-container"></p>
-            <p>Click <a href="/date">here</a> to see the server response directly.</p>
-        </div>
-
-        <div id="interaction">
-            <p>Click this button to see more information about me.</p>
-            <button onclick="myRespond();">
-            Get Information
-            </button>
-            <p id="info-container"></p>
-            <p>Click <a href="/information">here</a> to see the all fun facts about me.</p>
         </div>
         <div id="interaction">
             <form action="/form-handler" method="POST">
-            <p>Text me anything or leave your contact information:</p>
-            <textarea name="text-input">Hello! Xiaoyue!</textarea>
+            <p>Text me anything:</p>
+            <textarea name="text-input">Hi!</textarea>
             <br/>
             <input type="submit" />
             </form>
         </div>
+    </div>
+  </body>
+  <body onload="loadContacts()">
+    <div id="interaction">
+        <form action="/store-data" method="POST">
+            <p>You can leave your contact information below:</p>
+            <textarea name="text-input"></textarea>
+            <br/>
+            <input type="submit" />
+        </form>
+        <hr/>
+        <p>Contact Information Recieved:</p>
+        <ul id="contact-list"></ul>
     </div>
   </body>
 </html>
