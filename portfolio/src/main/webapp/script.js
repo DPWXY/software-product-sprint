@@ -32,8 +32,8 @@ async function myRespond() {
 
     const infoContainer = document.getElementById('info-container');
     const random_ind = Math.floor(Math.random() * Object.keys(textFromResponse).length);
-    const info_ind = Object.keys(textFromResponse);
-    var info_choose = info_ind[random_ind];
+    const info_keys = Object.keys(textFromResponse);
+    var info_choose = info_keys[random_ind];
     infoContainer.innerText = textFromResponse[info_choose];
 }
 

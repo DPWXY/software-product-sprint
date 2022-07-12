@@ -1,7 +1,9 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 750px;
+  width: 1200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #greeting-container {
@@ -31,6 +33,11 @@ img{
     text-align: center;
 }
 
+textarea {
+    width: 300px;
+    height: 100px;
+}
+
 #contact-list {
   list-style-type: none;
 }
@@ -45,4 +52,142 @@ img{
 
 .contact span {
   flex-grow: 1;
+}
+
+#coding{
+    width: 120px
+}
+
+.typewriter p {
+  border-right: .15em solid rgb(39, 39, 41);
+  font-family: "Courier";
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+  
+.typewriter p:nth-child(1) {
+    width: 360px;
+    -webkit-animation: type 2s steps(40, end);
+    animation: type 2s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+  
+.typewriter p:nth-child(2) {
+    width: 550px;
+    opacity: 0;
+    -webkit-animation: type2 2s steps(40, end);
+    animation: type2 2s steps(40, end);
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(3) {
+    width: 340px;
+    opacity: 0;
+    -webkit-animation: type3 5s steps(40, end);
+    animation: type3 2s steps(40, end);
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(4) {
+    width: 350px;
+    opacity: 0;
+    -webkit-animation: type4 10s steps(40, end);
+    animation: type4 2s steps(40, end);
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(5) {
+    width: 380px;
+    opacity: 0;
+    -webkit-animation: type5 10s steps(40, end), blink .5s step-end infinite alternate;
+    animation: type5 2s steps(40, end), blink .5s step-end infinite alternate;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes type {
+    0% {width: 0;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {border: none;}
+}
+
+@-webkit-keyframes type {
+    0% {width: 0;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {border: none;}
+}
+
+@keyframes type2 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {opacity: 1;
+        border: none;}
+}
+
+@-webkit-keyframes type2 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {opacity: 1; border: none;}
+}
+
+@keyframes type3 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {opacity: 1;
+        border: none;}
+}
+
+@-webkit-keyframes type3 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes type4 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    99.9% {border-right: .15em solid rgb(59, 59, 61);}
+    100% {opacity: 1;
+        border: none;}
+}
+
+@-webkit-keyframes type4 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes type5 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes type5 {
+    0% {width: 0;}
+    1% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent; }
+}
+@-webkit-keyframes blink {
+    50% {border-color: tranparent;}
 }

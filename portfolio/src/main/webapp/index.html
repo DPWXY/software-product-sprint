@@ -2,81 +2,227 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Xiaoyue's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+        crossorigin="anonymous">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1 class="center">My Portfolio</h1>
-      <h3>General Infomation</h3>
-      <p>
-        Hi, My name is Xiaoyue Wang. I am an undergraduate studying at University of California 
-        San Diego (UCSD) and double majoring in Applied Mathematics and Data Science. 
-      </p>
-      <p>
-        Coding language:
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>HMTL</li>
-            <li>Javascript</li>
-        </ul>
-      </p>
-      <h3>Contact Infomation</h3>
-      <p>
-        Click <a href="https://www.linkedin.com/in/xiaoyue-wang-611029232/">here</a> to see my LinkedIn
-      </p>
-      <p>
-        Click <a href="https://github.com/DPWXY/software-product-sprint">here</a> to see my GitHub
-      </p>
-      <h3>Project</h3>
-      <h4>Course Project</h4>
-      <p>
-        Life of Cell Project (Java): Create Cell classes and a PetriDish class that 
-        represents a 2D board of different types of cells to move and play the game
-      </p>
-      <p>
-        Blackjack Project (Python): Monitor the simple casino banking game 
-        Blackjack for players and dealers 
-      </p>
-      <h4>Other Project</h4>
-      <p>
-        UCSD CSSA WeChat Mini Program: Design and implementation of the lottery 
-        announcement section in the Mini Program
-      </p>
-      <h3>Fun Facts about me</h3>
-      <p>
-        Click to see my interests:
-      </p>
-      <button onclick="addRandomFunFact()">WOW! Try this!</button>
-      <div id="greeting-container"></div>
+      <h1 class="center" style="font-family:Verdana;font-size:50px;">XIAOYUE'S PORTFOLIO</h1>
+      <p></p>
+      <h2 style="font-family:'Times New Roman', Times, serif;font-size:35px" class="center">Welcome to My Portfolio!</h2>
+      <p></p>
+      <div class="card mb-3" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col">
+            <img style="float:left;" src="./images/Sea.png" class="img-fluid rounded-start" alt="In San Deigo Sea">
+          </div>
+          <div class="col">
+            <div class="card-body">
+              <h3 class="card-title;" style="font-family:Monaco;">About Xiaoyue Wang!</h3>
+                <div class="typewriter" style="color: rgb(59, 58, 58);">
+                    <p class="card-text" style="font-family:Monaco;font-size:22px">Hi! I'm an undergraduate at</p>
+                    <p class="card-text" style="font-family:Monaco;font-size:22px">University of California San Diego (UCSD)</p>
+                    <p class="card-text" style="font-family:Monaco;font-size:22px">Major: Applied Mathematics</p>
+                    <p class="card-text" style="font-family:Monaco;font-size:22px">Double Major: Data Science</p>
+                    <p style="font-family:Monaco;font-size:20px">Contact Information at the end!</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-4" style="max-width: 1200px;">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 style="font-family:Monaco;font-size: 30px;">CODING LANGUAGE:</h5>
+              <p></p>
+              <p style="font-family:Rockwell;">
+                <button type="button" class="btn btn-outline-secondary" style="font-size:25px">Python</button>
+                <button type="button" class="btn btn-outline-secondary" style="font-size:25px">Java</button>
+                <button type="button" class="btn btn-outline-secondary" style="font-size:25px">HTML</button>
+                <button type="button" class="btn btn-outline-secondary" style="font-size:25px">Javascript</button>
+                <button type="button" class="btn btn-outline-secondary" style="font-size:25px">C</button>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img style="float:right;" src="./images/coding.jpeg" class="img-fluid rounded-start" alt="Coding">
+          </div>
+        </div>
+      </div>
+      <h3 style="font-family:Rockwell;">PROJECT</h3>
+      <h5 style="font-family:Rockwell;">Click each bottum to see more details of each project</h5>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal1" style="font-family:Comic Sans MS;">
+            Course Project (Java)
+        </button>
+        <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-family:Rockwell;">Life of Cell Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="font-family:'Times New Roman', Times, serif;">
+                        Create Cell classes and a PetriDish class that 
+                        represents a 2D board of different types of cells to move and play the game
+                    </div>
+                    <div class="modal-body; center">
+                        To be display soon...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal2" style="font-family:Comic Sans MS;">
+            Course Project (Python)
+        </button>
+        <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-family:Rockwell;">Blackjack Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="font-family:'Times New Roman', Times, serif;">
+                        Monitor the simple casino banking game 
+                        Blackjack for players and dealers 
+                    </div>
+                    <div class="modal-body; center">
+                        To be display soon...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal3" style="font-family:Comic Sans MS;">
+            WeChat Mini Project(HTML & Javascript)
+        </button>
+        <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-family:Rockwell;">UCSD CSSA WeChat Mini Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="font-family:'Times New Roman', Times, serif;">
+                        Design and implementation of the lottery 
+                        announcement section in the Mini Program
+                    </div>
+                    <div class="modal-body; center">
+                        To be display soon...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal4" style="font-family:Comic Sans MS;">
+            SPS Group Project
+        </button>
+        <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="font-family:Rockwell;">SPS Group Program</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" style="font-family:'Times New Roman', Times, serif;">
+                        On progress...
+                    </div>
+                    <div class="modal-body; center">
+                        To be display soon...
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p></p>
+      <h3 style="font-family:Rockwell;">FUN FACTS ABOUT ME</h3>
+      <div class="center">
+        <button type="button" class="btn btn-info" onclick="addRandomFunFact()" style="font-family:Comic Sans MS;">Try this several times to see my interests</button>
+        <div id="greeting-container"></div>
+      </div>
+      <p></p>
+      <div id="interaction">
+        <button type="button" class="btn btn-warning" onclick="myRespond();" style="font-family:Comic Sans MS;">
+        More Fun Facts to discover!
+        </button>
+        <p></p>
+        <p id="info-container"></p>
+        <p></p>
+        <a class="btn btn-success" href="/information" role="button">Click here to see the all fun facts about me.</a>
+      </div>
     </div>
     <div id="content">
-      <h3>My Photo in San Diego</h3>
-      <img src="./images/Sea.png" alt="A photograph of sea at San Diego."></img>
+        <h3 style="font-family:Rockwell;">MY PHOTOS: Click to see more</h3>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/SF.png" class="d-block w-100" alt="June 2022 in San Fransisco">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Golden Bridge</h5>
+              <p>June 2022 in San Fransisco</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/fluorescent_sea.JPG" class="d-block w-100" alt="fluorescent_sea">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fluorescent Sea</h5>
+              <p>March 2022 in San Deigo</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/BigSur_Sunset.png" class="d-block w-100" alt="BigSur_Sunset">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sunset</h5>
+              <p>June 2022 in Big Sur</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p></p>
+      <div class="center">
+        <p style="font-family:Rockwell; font-size: 30px;">MORE INTERACTION WITH ME!</p>
+      </div>
     </div>
         <div id="interaction">
-            <p>Click this button to see more information about me.</p>
-            <button onclick="myRespond();">
-            More Fun Facts!
-            </button>
-            <p id="info-container"></p>
-            <p>Click <a href="/information">here</a> to see the all fun facts about me.</p>
-        </div>
-        <div id="interaction">
-            <p>Click this button to see the server's current date.</p>
-            <button onclick="showServerTime();">
+            <p style="font-family:Comic Sans MS">Click this button to see the server's current date.</p>
+            <button type="button" class="btn btn-outline-primary" onclick="showServerTime();" style="font-family:Comic Sans MS">
             Get date
             </button>
             <p id="date-container"></p>
         </div>
         <div id="interaction">
             <form action="/form-handler" method="POST">
-            <p>Text me anything:</p>
+            <p style="font-family:Comic Sans MS">Text me anything:</p>
             <textarea name="text-input">Hi!</textarea>
             <br/>
-            <input type="submit" />
+            <input type="submit" class="btn btn-outline-dark"/>
             </form>
         </div>
     </div>
@@ -84,14 +230,47 @@
   <body onload="loadContacts()">
     <div id="interaction">
         <form action="/store-data" method="POST">
-            <p>You can leave your contact information below:</p>
+            <p style="font-family:Comic Sans MS">You can leave your contact information below:</p>
             <textarea name="text-input"></textarea>
             <br/>
-            <input type="submit" />
+            <input type="submit" class="btn btn-outline-dark"/>
         </form>
         <hr/>
-        <p>Contact Information Recieved:</p>
-        <ul id="contact-list"></ul>
+        <p style="font-family:Comic Sans MS">Contact Information Recieved:</p>
+        <ul id="contact-list" style="font-family:Comic Sans MS"></ul>
     </div>
+  </body>
+  <body id="content">
+    <h3>Contact Infomation</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="./images/linkedin-logo.png" class="card-img-top" alt="LinkedIn">
+          <div class="card-body">
+            <h5 class="card-title">Happy to connect!</h5>
+            <a href="https://www.linkedin.com/in/xiaoyue-wang-611029232/" class="btn btn-primary" role="button">Link to my page</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="./images/instagram-logo.png" class="card-img-top" alt="Instagram">
+          <div class="card-body">
+            <h5 class="card-title">Welcome to follow me: dp.moana.wang</h5>
+            <a href="https://www.instagram.com/dp.moana.wang/" class="btn btn-primary" role="button">Link to my page</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="./images/github-logo.png" class="card-img-top" alt="github">
+          <div class="card-body">
+            <h5 class="card-title">Project Here!</h5>
+            <a href="https://github.com/DPWXY/software-product-sprint" class="btn btn-primary" role="button">Link to my GitHub project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p></p>
   </body>
 </html>
