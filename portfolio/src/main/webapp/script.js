@@ -31,10 +31,11 @@ async function myRespond() {
     const textFromResponse = await responseFromServer.json();
 
     const infoContainer = document.getElementById('info-container');
-    const random_ind = Math.floor(Math.random() * Object.keys(textFromResponse).length);
-    const info_keys = Object.keys(textFromResponse);
+    const textCollect = textFromResponse[Object.keys(textFromResponse)];
+    const random_ind = Math.floor(Math.random() * Object.keys(textCollect).length);
+    const info_keys = Object.keys(textCollect);
     var info_choose = info_keys[random_ind];
-    infoContainer.innerText = textFromResponse[info_choose];
+    infoContainer.innerText = textCollect[info_choose];
 }
 
 function loadContacts() {
