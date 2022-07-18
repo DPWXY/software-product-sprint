@@ -1,17 +1,3 @@
-// Copyright 2020 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 /**
  * Adds a random greeting to the page.
  */
@@ -32,3 +18,41 @@ function addRandomFunFact() {
     greetingContainer.innerText = greeting;
   }
   
+async function showServerTime() {
+    const responseFromServer = await fetch('/date');
+    const textFromResponse = await responseFromServer.text();
+
+    const dateContainer = document.getElementById('date-container');
+    dateContainer.innerText = textFromResponse;
+}
+
+async function myRespond() {
+    const responseFromServer = await fetch('/information');
+    const textFromResponse = await responseFromServer.json();
+
+    const infoContainer = document.getElementById('info-container');
+    const random_ind = Math.floor(Math.random() * Object.keys(textFromResponse).length);
+    const info_keys = Object.keys(textFromResponse);
+    var info_choose = info_keys[random_ind];
+    infoContainer.innerText = textFromResponse[info_choose];
+}
+
+function loadContacts() {
+    fetch('/contacts-store').then(response => response.json()).then((contacts) => {
+      const contactListElement = document.getElementById('contact-list');
+      contacts.forEach((contact) => {
+        contactListElement.appendChild(createContactsElement(contact));
+      })
+    });
+}
+
+function createContactsElement(contact) {
+    const contactElement = document.createElement('li');
+    contactElement.className = 'contact';
+  
+    const infoElement = document.createElement('span');
+    infoElement.innerText = contact.info;
+  
+    contactElement.appendChild(infoElement);
+    return contactElement;
+}
