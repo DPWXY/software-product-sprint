@@ -38,7 +38,7 @@ async function myRespond() {
 }
 
 function loadContacts() {
-    fetch('/contact').then(response => response.json()).then((contacts) => {
+    fetch('/contacts-store').then(response => response.json()).then((contacts) => {
       const contactListElement = document.getElementById('contact-list');
       contacts.forEach((contact) => {
         contactListElement.appendChild(createContactsElement(contact));

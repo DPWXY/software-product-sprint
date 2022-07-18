@@ -10,7 +10,7 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body>
+  <body onload="loadContacts()">
     <div id="content">
       <h1 class="center" style="font-family:Verdana;font-size:50px;">XIAOYUE'S PORTFOLIO</h1>
       <p></p>
@@ -72,7 +72,7 @@
                         represents a 2D board of different types of cells to move and play the game
                     </div>
                     <div class="modal-body; center">
-                        To be display soon...
+                        <!-- Add project display information -->
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -95,7 +95,7 @@
                         Blackjack for players and dealers 
                     </div>
                     <div class="modal-body; center">
-                        To be display soon...
+                        <!-- Add project display information -->
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -118,7 +118,7 @@
                         announcement section in the Mini Program
                     </div>
                     <div class="modal-body; center">
-                        To be display soon...
+                        <!-- Add project display information -->
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -140,7 +140,7 @@
                         On progress...
                     </div>
                     <div class="modal-body; center">
-                        To be display soon...
+                        <!-- Add project display information -->
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -217,30 +217,30 @@
             </button>
             <p id="date-container"></p>
         </div>
-        <div id="interaction">
+        <!-- <div id="interaction">
             <form action="/form-handler" method="POST">
             <p style="font-family:Comic Sans MS">Text me anything:</p>
             <textarea name="text-input">Hi!</textarea>
             <br/>
             <input type="submit" class="btn btn-outline-dark"/>
             </form>
-        </div>
+        </div> -->
     </div>
-  </body>
-  <body onload="loadContacts()">
+  </div>
+  <div>
     <div id="interaction">
-        <form action="/store-data" method="POST">
-            <p style="font-family:Comic Sans MS">You can leave your contact information below:</p>
+        <form action="/contacts-store" method="POST">
+            <p style="font-family:Comic Sans MS">You can leave your contact information or anything you want to text below:</p>
             <textarea name="text-input"></textarea>
             <br/>
             <input type="submit" class="btn btn-outline-dark"/>
         </form>
         <hr/>
-        <p style="font-family:Comic Sans MS">Contact Information Recieved:</p>
+        <p style="font-family:Comic Sans MS">Information Recieved:</p>
         <ul id="contact-list" style="font-family:Comic Sans MS"></ul>
     </div>
-  </body>
-  <body id="content">
+</div>
+  <div id="content">
     <h3>Contact Infomation</h3>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
@@ -272,5 +272,6 @@
       </div>
     </div>
     <p></p>
+    </div>
   </body>
 </html>

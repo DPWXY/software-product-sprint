@@ -3,6 +3,8 @@ package com.google.sps.servlets;
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
 import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.StructuredQuery.OrderBy;
@@ -15,10 +17,28 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /** Servlet responsible for listing contact. */
-@WebServlet("/contact")
-public class ReadDatastore extends HttpServlet {
+@WebServlet("/contacts-store")
+public class ContactsServlet extends HttpServlet {
+
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    // Sanitize user input to remove HTML tags and JavaScript.
+    String textValue = request.getParameter("text-input");
+    long timestamp = System.currentTimeMillis();
+
+    Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
+    FullEntity taskEntity =
+        Entity.newBuilder(keyFactory.newKey())
+            .set("contactinfo", textValue)
+            .set("timestamp", timestamp)
+            .build();
+    datastore.put(taskEntity);
+
+    response.setContentType("text/html;");
+    response.getWriter().println("Thank you! You have successfully submitted your information or message!");
+  }
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -43,4 +63,5 @@ public class ReadDatastore extends HttpServlet {
     response.setContentType("application/json;");
     response.getWriter().println(gson.toJson(contacts));
   }
+ 
 }

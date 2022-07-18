@@ -11,18 +11,16 @@ import com.google.gson.Gson;
 public final class InformationServlet extends HttpServlet {
   class MyInformation {
     public String[] messages;
+    MyInformation(String[] messages) {
+         this.messages = messages;
+    }
   }
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    // Convert the server info to JSON
-    String[] info = new String[3];
-    info[0] = "I enjoy basketball, badmiton, pingpong, and running";
-    info[1] = "I will learn tennis and boxing this summer";
-    info[2] = "I am learning stakeboarding now";
-    MyInformation information = new MyInformation();
-    information.messages = info;
+    final MyInformation information = new MyInformation(new String[]{"I enjoy basketball, badmiton, pingpong, and running",
+                                            "Learning tennis and boxing this summer", 
+                                            "Larning stakeboarding now"});
     String json = convertToJson(information);
-
     // Send the JSON as the response
     response.setContentType("application/json;");
     response.getWriter().println(json);
