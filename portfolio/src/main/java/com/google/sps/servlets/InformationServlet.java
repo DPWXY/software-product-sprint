@@ -15,23 +15,17 @@ public final class InformationServlet extends HttpServlet {
          this.messages = messages;
     }
   }
+
+  private final MyInformation information = new MyInformation(new String[]{"I enjoy basketball, badmiton, pingpong, and running",
+                                                                            "Learning tennis and boxing this summer", 
+                                                                            "Larning stakeboarding now"});
+  private final Gson gson = new Gson();
+
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    final MyInformation information = new MyInformation(new String[]{"I enjoy basketball, badmiton, pingpong, and running",
-                                            "Learning tennis and boxing this summer", 
-                                            "Larning stakeboarding now"});
-    String json = convertToJson(information);
+    String json = gson.toJson(information);
     // Send the JSON as the response
     response.setContentType("application/json;");
     response.getWriter().println(json);
-  }
-
-  /**
-   * Converts a ServerStats instance into a JSON string using manual String concatentation.
-   */
-  private String convertToJson(MyInformation info) {
-    Gson gson = new Gson();
-    String json = gson.toJson(info.messages);
-    return json;
   }
 }
